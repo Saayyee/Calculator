@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <style>
+        *{
+        padding: 0px;
+        margin: 0px;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-image:url(./calcutor\ imag.jpeg);
+            background-size: 100vw 100vh;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-attachment: fixed;
+        }
+        #container
+        {
+            width:35vw;
+            height: 95vh;
+            background-color: rgba(21, 23, 11, 0.585);
+            border-radius: 30px;
+            box-shadow: 5px 5px 10px black;
+            position: relative;
+            border: 5px solid green;
+        }
+        #display
+        {
+            width: 28vw;
+            height: 11vh;
+            position: absolute;
+            left: 6%;
+            top: 2%;
+            outline: none;
+            box-shadow: 5px 5px 5px black;
+            border: 8px groove white;
+            border-radius: 10px;
+            font-size: 55px;
+            padding-left: 6px;
+            padding-right: 6px;
+            background-color: rgba(0, 0, 0, 0.846);
+            color: white;
+            font-family: 'Orbitron', sans-serif;
+            
+        }
+        .a
+        {
+            width:7vw;
+            height: 12.5vh;
+            margin: 3px;
+            margin-bottom: 15px;
+            font-size: 40px;
+            border-radius: 10px;
+            position: relative;
+            top: 15vh;
+            left: 2.5vw;
+            border: 2px solid white;
+            background-color: rgba(0, 0, 0, 0.513);
+            color: white;
+        }
+        #clear
+        {
+            width:15vw;
+            height: 15vh;
+            border: 2px solid white;
+            background-color:rgba(65, 105, 225, 0.842);
+            color: white;
+            border-radius: 10px;
+            position: absolute;
+            left: 2vw;
+            bottom: 2vh;
+            font-size: 50px;
+        }
+        #equ
+        {
+            width:15vw;
+            height: 15vh;
+            border: 2px solid white;
+            background-color:rgba(65, 105, 225, 0.842);
+            color: white;
+            border-radius: 10px;
+            position: absolute;
+            right:2vw;
+            bottom: 2vh;
+            font-size: 90px;
+        }
+        #one:active
+        {
+            background-color:cadetblue;
+        }
+        #two:active
+        {
+            background-color:beige;
+        }
+        #three:active
+        {
+            background-color:coral;
+        }
+        #four:active
+        {
+            background-color:darkgreen;
+        }
+        #five:active
+        {
+            background-color:crimson;
+        }
+        #six:active
+        {
+            background-color:deeppink;
+        }
+        #seven:active
+        {
+            background-color:violet;
+        }
+        #eight:active
+        {
+            background-color:aqua;
+        }
+        #nine:active
+        {
+            background-color:darkgoldenrod;
+        }
+        #plus:active
+        {
+            background-color:springgreen;
+        }
+        #sub:active
+        {
+            background-color:magenta;
+        }
+        #mod:active
+        {
+            background-color:chartreuse;
+        }
+        #dot:active
+        {
+            background-color:hotpink;
+        }
+        #into:active
+        {
+            background-color:indigo;
+        }
+        #div:active
+        {
+            background-color:brown;
+        }
+        #dot:active
+        {
+            background-color:lightpink;
+        }
+        #equ:active
+        {
+            background-color:greenyellow;
+        }
+        #clear:active
+        {
+            background-color:purple;
+        }
+        #zero:active
+        {
+            background-color:turquoise;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+    <form name="cform">
+          <input name="ans" id="display">
+          <br>
+          <input onmousedown="clicksound()" id="one"     class="a" type="button"   value="1"   onclick="cform.ans.value +='1'">
+          <input onmousedown="clicksound()" id="two"     class="a" type="button"   value="2"   onclick="cform.ans.value +='2'">
+          <input onmousedown="clicksound()" id="three"   class="a" type="button"   value="3"   onclick="cform.ans.value +='3'">
+          <input onmousedown="clicksound()" id="plus"    class="a" type="button"   value="+"   onclick="cform.ans.value +='+'">
+          <br>         
+          <input onmousedown="clicksound()" id="four"    class="a" type="button"   value="4"   onclick="cform.ans.value +='4'">
+          <input onmousedown="clicksound()" id="five"    class="a" type="button"   value="5"   onclick="cform.ans.value +='5'">
+          <input onmousedown="clicksound()" id="six"     class="a" type="button"   value="6"   onclick="cform.ans.value +='6'">
+          <input onmousedown="clicksound()" id="sub"     class="a" type="button"   value="-"   onclick="cform.ans.value +='-'">
+          <br>         
+          <input onmousedown="clicksound()" id="seven"   class="a" type="button"   value="7"   onclick="cform.ans.value +='7'">
+          <input onmousedown="clicksound()" id="eight"   class="a" type="button"   value="8"   onclick="cform.ans.value +='8'">
+          <input onmousedown="clicksound()" id="nine"    class="a" type="button"   value="9"   onclick="cform.ans.value +='9'">
+          <input onmousedown="clicksound()" id="into"    class="a" type="button"   value="x"   onclick="cform.ans.value +='*'">
+          <br>                 
+          <input onmousedown="clicksound()" id="mod"     class="a" type="button"   value="%"   onclick="cform.ans.value +='%'">
+          <input onmousedown="clicksound()" id="zero"    class="a" type="button"   value="0"   onclick="cform.ans.value +='0'">
+          <input onmousedown="clicksound()" id="dot"     class="a" type="button"   value="."   onclick="cform.ans.value +='.'">
+          <input onmousedown="clicksound()" id="div"     class="a" type="button"   value="/"   onclick="cform.ans.value +='/'">
+          <br>         
+          <input onmousedown="clicksound()" id="equ"   type="button"    value="="   onclick="cform.ans.value = eval(cform.ans.value)">
+          <input onmousedown="clicksound()" id="clear" type="button"    value="C"   onclick="cform.ans.value =' '">
+    </form>     
+</div>
+<script>
+    function clicksound()
+    {
+        var clksound=new Audio()
+        clksound.src="clicksound.wav"
+        clksound.play()
+    }
+</script>
+</body>
+</html>
